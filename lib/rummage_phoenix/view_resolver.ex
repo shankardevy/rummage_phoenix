@@ -13,6 +13,7 @@ defmodule Rummage.Phoenix.ViewResolver do
     |> Enum.at(-1)
     |> String.split("View")
     |> Enum.at(0)
+    |> Macro.underscore
     |> String.downcase
     |> String.to_atom
   end
